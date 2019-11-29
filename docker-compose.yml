@@ -1,0 +1,11 @@
+version: "2"
+services:
+  simple:
+    image: safakcirag/fbprophet:0.4.post2
+    volumes:
+      - "./workspace:/workspace"
+    ports: 
+      - "9999:9999"
+    working_dir: /workspace
+    command: "jupyter notebook --allow-root --ip 0.0.0.0 --port 9999"
+    
